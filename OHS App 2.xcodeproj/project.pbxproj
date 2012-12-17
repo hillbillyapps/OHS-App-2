@@ -1,0 +1,499 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1451E351167F757B00E7237A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1451E350167F757B00E7237A /* UIKit.framework */; };
+		1451E353167F757B00E7237A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1451E352167F757B00E7237A /* Foundation.framework */; };
+		1451E355167F757B00E7237A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1451E354167F757B00E7237A /* CoreGraphics.framework */; };
+		1451E35B167F757B00E7237A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1451E359167F757B00E7237A /* InfoPlist.strings */; };
+		1451E35D167F757B00E7237A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1451E35C167F757B00E7237A /* main.m */; };
+		1451E361167F757B00E7237A /* OHS2AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1451E360167F757B00E7237A /* OHS2AppDelegate.m */; };
+		1451E363167F757B00E7237A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1451E362167F757B00E7237A /* Default.png */; };
+		1451E365167F757B00E7237A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1451E364167F757B00E7237A /* Default@2x.png */; };
+		1451E367167F757B00E7237A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1451E366167F757B00E7237A /* Default-568h@2x.png */; };
+		1451E36A167F757B00E7237A /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1451E368167F757B00E7237A /* MainStoryboard_iPhone.storyboard */; };
+		1451E36D167F757B00E7237A /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1451E36B167F757B00E7237A /* MainStoryboard_iPad.storyboard */; };
+		1451E370167F757B00E7237A /* OHS2FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1451E36F167F757B00E7237A /* OHS2FirstViewController.m */; };
+		1451E372167F757B00E7237A /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 1451E371167F757B00E7237A /* first.png */; };
+		1451E374167F757B00E7237A /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1451E373167F757B00E7237A /* first@2x.png */; };
+		1451E377167F757B00E7237A /* OHS2SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1451E376167F757B00E7237A /* OHS2SecondViewController.m */; };
+		1451E379167F757B00E7237A /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 1451E378167F757B00E7237A /* second.png */; };
+		1451E37B167F757B00E7237A /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1451E37A167F757B00E7237A /* second@2x.png */; };
+		1451E383167F757C00E7237A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1451E382167F757C00E7237A /* SenTestingKit.framework */; };
+		1451E384167F757C00E7237A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1451E350167F757B00E7237A /* UIKit.framework */; };
+		1451E385167F757C00E7237A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1451E352167F757B00E7237A /* Foundation.framework */; };
+		1451E38D167F757C00E7237A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1451E38B167F757C00E7237A /* InfoPlist.strings */; };
+		1451E390167F757C00E7237A /* OHS_App_2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1451E38F167F757C00E7237A /* OHS_App_2Tests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1451E386167F757C00E7237A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1451E343167F757B00E7237A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1451E34B167F757B00E7237A;
+			remoteInfo = "OHS App 2";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1451E34C167F757B00E7237A /* OHS App 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OHS App 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1451E350167F757B00E7237A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1451E352167F757B00E7237A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1451E354167F757B00E7237A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1451E358167F757B00E7237A /* OHS App 2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OHS App 2-Info.plist"; sourceTree = "<group>"; };
+		1451E35A167F757B00E7237A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1451E35C167F757B00E7237A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1451E35E167F757B00E7237A /* OHS App 2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OHS App 2-Prefix.pch"; sourceTree = "<group>"; };
+		1451E35F167F757B00E7237A /* OHS2AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OHS2AppDelegate.h; sourceTree = "<group>"; };
+		1451E360167F757B00E7237A /* OHS2AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OHS2AppDelegate.m; sourceTree = "<group>"; };
+		1451E362167F757B00E7237A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		1451E364167F757B00E7237A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		1451E366167F757B00E7237A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		1451E369167F757B00E7237A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		1451E36C167F757B00E7237A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		1451E36E167F757B00E7237A /* OHS2FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OHS2FirstViewController.h; sourceTree = "<group>"; };
+		1451E36F167F757B00E7237A /* OHS2FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OHS2FirstViewController.m; sourceTree = "<group>"; };
+		1451E371167F757B00E7237A /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		1451E373167F757B00E7237A /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		1451E375167F757B00E7237A /* OHS2SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OHS2SecondViewController.h; sourceTree = "<group>"; };
+		1451E376167F757B00E7237A /* OHS2SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OHS2SecondViewController.m; sourceTree = "<group>"; };
+		1451E378167F757B00E7237A /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		1451E37A167F757B00E7237A /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		1451E381167F757C00E7237A /* OHS App 2Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OHS App 2Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1451E382167F757C00E7237A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		1451E38A167F757C00E7237A /* OHS App 2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OHS App 2Tests-Info.plist"; sourceTree = "<group>"; };
+		1451E38C167F757C00E7237A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1451E38E167F757C00E7237A /* OHS_App_2Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OHS_App_2Tests.h; sourceTree = "<group>"; };
+		1451E38F167F757C00E7237A /* OHS_App_2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OHS_App_2Tests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1451E349167F757B00E7237A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1451E351167F757B00E7237A /* UIKit.framework in Frameworks */,
+				1451E353167F757B00E7237A /* Foundation.framework in Frameworks */,
+				1451E355167F757B00E7237A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1451E37D167F757C00E7237A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1451E383167F757C00E7237A /* SenTestingKit.framework in Frameworks */,
+				1451E384167F757C00E7237A /* UIKit.framework in Frameworks */,
+				1451E385167F757C00E7237A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1451E341167F757B00E7237A = {
+			isa = PBXGroup;
+			children = (
+				1451E356167F757B00E7237A /* OHS App 2 */,
+				1451E388167F757C00E7237A /* OHS App 2Tests */,
+				1451E34F167F757B00E7237A /* Frameworks */,
+				1451E34D167F757B00E7237A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1451E34D167F757B00E7237A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1451E34C167F757B00E7237A /* OHS App 2.app */,
+				1451E381167F757C00E7237A /* OHS App 2Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1451E34F167F757B00E7237A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1451E350167F757B00E7237A /* UIKit.framework */,
+				1451E352167F757B00E7237A /* Foundation.framework */,
+				1451E354167F757B00E7237A /* CoreGraphics.framework */,
+				1451E382167F757C00E7237A /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1451E356167F757B00E7237A /* OHS App 2 */ = {
+			isa = PBXGroup;
+			children = (
+				1451E35F167F757B00E7237A /* OHS2AppDelegate.h */,
+				1451E360167F757B00E7237A /* OHS2AppDelegate.m */,
+				1451E368167F757B00E7237A /* MainStoryboard_iPhone.storyboard */,
+				1451E36B167F757B00E7237A /* MainStoryboard_iPad.storyboard */,
+				1451E36E167F757B00E7237A /* OHS2FirstViewController.h */,
+				1451E36F167F757B00E7237A /* OHS2FirstViewController.m */,
+				1451E371167F757B00E7237A /* first.png */,
+				1451E373167F757B00E7237A /* first@2x.png */,
+				1451E375167F757B00E7237A /* OHS2SecondViewController.h */,
+				1451E376167F757B00E7237A /* OHS2SecondViewController.m */,
+				1451E378167F757B00E7237A /* second.png */,
+				1451E37A167F757B00E7237A /* second@2x.png */,
+				1451E357167F757B00E7237A /* Supporting Files */,
+			);
+			path = "OHS App 2";
+			sourceTree = "<group>";
+		};
+		1451E357167F757B00E7237A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1451E358167F757B00E7237A /* OHS App 2-Info.plist */,
+				1451E359167F757B00E7237A /* InfoPlist.strings */,
+				1451E35C167F757B00E7237A /* main.m */,
+				1451E35E167F757B00E7237A /* OHS App 2-Prefix.pch */,
+				1451E362167F757B00E7237A /* Default.png */,
+				1451E364167F757B00E7237A /* Default@2x.png */,
+				1451E366167F757B00E7237A /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1451E388167F757C00E7237A /* OHS App 2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1451E38E167F757C00E7237A /* OHS_App_2Tests.h */,
+				1451E38F167F757C00E7237A /* OHS_App_2Tests.m */,
+				1451E389167F757C00E7237A /* Supporting Files */,
+			);
+			path = "OHS App 2Tests";
+			sourceTree = "<group>";
+		};
+		1451E389167F757C00E7237A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1451E38A167F757C00E7237A /* OHS App 2Tests-Info.plist */,
+				1451E38B167F757C00E7237A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1451E34B167F757B00E7237A /* OHS App 2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1451E393167F757C00E7237A /* Build configuration list for PBXNativeTarget "OHS App 2" */;
+			buildPhases = (
+				1451E348167F757B00E7237A /* Sources */,
+				1451E349167F757B00E7237A /* Frameworks */,
+				1451E34A167F757B00E7237A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OHS App 2";
+			productName = "OHS App 2";
+			productReference = 1451E34C167F757B00E7237A /* OHS App 2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1451E380167F757C00E7237A /* OHS App 2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1451E396167F757C00E7237A /* Build configuration list for PBXNativeTarget "OHS App 2Tests" */;
+			buildPhases = (
+				1451E37C167F757C00E7237A /* Sources */,
+				1451E37D167F757C00E7237A /* Frameworks */,
+				1451E37E167F757C00E7237A /* Resources */,
+				1451E37F167F757C00E7237A /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1451E387167F757C00E7237A /* PBXTargetDependency */,
+			);
+			name = "OHS App 2Tests";
+			productName = "OHS App 2Tests";
+			productReference = 1451E381167F757C00E7237A /* OHS App 2Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1451E343167F757B00E7237A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = OHS2;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "ZACHARY FLETCHER";
+			};
+			buildConfigurationList = 1451E346167F757B00E7237A /* Build configuration list for PBXProject "OHS App 2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1451E341167F757B00E7237A;
+			productRefGroup = 1451E34D167F757B00E7237A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1451E34B167F757B00E7237A /* OHS App 2 */,
+				1451E380167F757C00E7237A /* OHS App 2Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1451E34A167F757B00E7237A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1451E35B167F757B00E7237A /* InfoPlist.strings in Resources */,
+				1451E363167F757B00E7237A /* Default.png in Resources */,
+				1451E365167F757B00E7237A /* Default@2x.png in Resources */,
+				1451E367167F757B00E7237A /* Default-568h@2x.png in Resources */,
+				1451E36A167F757B00E7237A /* MainStoryboard_iPhone.storyboard in Resources */,
+				1451E36D167F757B00E7237A /* MainStoryboard_iPad.storyboard in Resources */,
+				1451E372167F757B00E7237A /* first.png in Resources */,
+				1451E374167F757B00E7237A /* first@2x.png in Resources */,
+				1451E379167F757B00E7237A /* second.png in Resources */,
+				1451E37B167F757B00E7237A /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1451E37E167F757C00E7237A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1451E38D167F757C00E7237A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1451E37F167F757C00E7237A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1451E348167F757B00E7237A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1451E35D167F757B00E7237A /* main.m in Sources */,
+				1451E361167F757B00E7237A /* OHS2AppDelegate.m in Sources */,
+				1451E370167F757B00E7237A /* OHS2FirstViewController.m in Sources */,
+				1451E377167F757B00E7237A /* OHS2SecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1451E37C167F757C00E7237A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1451E390167F757C00E7237A /* OHS_App_2Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1451E387167F757C00E7237A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1451E34B167F757B00E7237A /* OHS App 2 */;
+			targetProxy = 1451E386167F757C00E7237A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1451E359167F757B00E7237A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1451E35A167F757B00E7237A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1451E368167F757B00E7237A /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1451E369167F757B00E7237A /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		1451E36B167F757B00E7237A /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1451E36C167F757B00E7237A /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		1451E38B167F757C00E7237A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1451E38C167F757C00E7237A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1451E391167F757C00E7237A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1451E392167F757C00E7237A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1451E394167F757C00E7237A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OHS App 2/OHS App 2-Prefix.pch";
+				INFOPLIST_FILE = "OHS App 2/OHS App 2-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1451E395167F757C00E7237A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OHS App 2/OHS App 2-Prefix.pch";
+				INFOPLIST_FILE = "OHS App 2/OHS App 2-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1451E397167F757C00E7237A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OHS App 2.app/OHS App 2";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OHS App 2/OHS App 2-Prefix.pch";
+				INFOPLIST_FILE = "OHS App 2Tests/OHS App 2Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		1451E398167F757C00E7237A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OHS App 2.app/OHS App 2";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OHS App 2/OHS App 2-Prefix.pch";
+				INFOPLIST_FILE = "OHS App 2Tests/OHS App 2Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1451E346167F757B00E7237A /* Build configuration list for PBXProject "OHS App 2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1451E391167F757C00E7237A /* Debug */,
+				1451E392167F757C00E7237A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1451E393167F757C00E7237A /* Build configuration list for PBXNativeTarget "OHS App 2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1451E394167F757C00E7237A /* Debug */,
+				1451E395167F757C00E7237A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1451E396167F757C00E7237A /* Build configuration list for PBXNativeTarget "OHS App 2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1451E397167F757C00E7237A /* Debug */,
+				1451E398167F757C00E7237A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1451E343167F757B00E7237A /* Project object */;
+}
