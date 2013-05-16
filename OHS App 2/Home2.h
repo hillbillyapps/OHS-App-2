@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Home2 : UITableViewController
 
+@interface Home2 : UITableViewController {
+    IBOutlet UILabel* label;
+}
 @end

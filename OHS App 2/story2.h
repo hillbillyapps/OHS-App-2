@@ -6,8 +6,23 @@
 //  Copyright (c) 2013 ZACHARY FLETCHER. All rights reserved.
 //
 
+
 #import <UIKit/UIKit.h>
+#import "ozark.h"
+//NSString *postBro33;
+@interface story2 : UIViewController {
+    NSNumber *postBro33;
+    NSValue *idBro;
+    NSValue *postId;
+    
+}
+   //NSString *postStory;
 
-@interface story2 : UIViewController
+@property (strong, nonatomic) IBOutlet UIWebView *webView;
 
+@property NSNumber *postBro33;
+@property NSValue *idBro;
+@property NSValue *postId;
+@property NSString *realTitle;
 @end
+ 

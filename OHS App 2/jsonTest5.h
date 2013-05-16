@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ozark.h"
 @interface jsonTest5 : UIViewController
+@property (strong, nonatomic) IBOutlet UILabel *label22;
+@property (strong, nonatomic) IBOutlet UITextView *label33;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *loading;
+
 
 @end

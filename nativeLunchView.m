@@ -7,8 +7,13 @@
 //
 
 #import "nativeLunchView.h"
+#define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
 
-@interface nativeLunchView ()
+#define kjsonURL [NSURL URLWithString: @"http://baylife.me/mobile/json"]
+@interface nativeLunchView () {
+    NSMutableArray *jsonResults;
+    
+}
 
 @end
 
@@ -22,17 +27,48 @@
     }
     return self;
 }
+- (void)fetchedData:(NSData *)responseData {
+    
+    NSError* error;
+    
+    NSDictionary* json = [NSJSONSerialization
+                          
+                          JSONObjectWithData:responseData
+                          
+                          options:kNilOptions
+                          
+                          error:&error];
+    jsonResults = [json objectForKey:@"object_name"];
+    // jsonResults = [json objectForKey:@"results"];
+    
+
+}
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-}
+      [super viewDidLoad];
+    dispatch_async(kBgQueue, ^{
+        
+        NSData* data2 = [NSData dataWithContentsOfURL:
+                        
+                        kjsonURL];
+        [self performSelectorOnMainThread:@selector(fetchedData:)
+         
+                               withObject:data2 waitUntilDone:YES];
+            });
+    
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+       // NSDictionary *appsdict = [jsonResults data2];
+    
+   // textLabel.text = [appsdict objectForKey:@"title"];
+   // _lolBro.text = [appsdict objectForKey:@"title"];
+    
+    
+    
+   	// Do any additional setup after loading the view.
 }
+                   
+
+
 
 @end

@@ -6,12 +6,25 @@
 //  Copyright (c) 2012 ZACHARY FLETCHER. All rights reserved.
 //
 
+#define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+
+//#define kjsonURL [NSURL URLWithString: @"http://baylife.me/mobile/json"]
+#define kjsonURL [NSURL URLWithString: @"https://graph.facebook.com/142919315888548/feed?access_token=BAACEdEose0cBABU0PXay1XA0H9ZBOO5cEFATGabYgZCJgG1bBe2plLe88eXpWxgFrzdNQCd2yEIyJ1mZBcncPitn8AcfbjdY9ZCfH0v8kSZB8WffZC6TdxNoe0csGLqK16p4s2lEPKzLbKVdjtxAYEH0NRgaI9DFEZBmsvDJAK51tsUnHdEGppbvbNZBDmWRRQMZD"]
+
 #import "OHS2AppDelegate.h"
 
 @implementation OHS2AppDelegate
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  //  NSData* data = [NSData dataWithContentsOfURL:
+   //
+    //                kjsonURL];
+    //if(!data) {
+     //   UIAlertView*aview=[[UIAlertView alloc]initWithTitle:@"Connection Failed" message:@"Network error" delegate:self cancelButtonTitle:@"Bug" otherButtonTitles:nil, nil ];
+       // [aview show];
+       // return NO;
+    //}
+    
     // Override point for customization after application launch.
     return YES;
 }

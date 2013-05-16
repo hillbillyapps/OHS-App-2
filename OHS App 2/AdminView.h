@@ -10,4 +10,6 @@
 
 @interface AdminView : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIWebView *webView;
+- (IBAction)refreshAdmin:(id)sender;
 @end

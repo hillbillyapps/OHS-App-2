@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LunchView : UIViewController
+@interface LunchView : UIViewController <UIWebViewDelegate> {
+    IBOutlet UIWebView *webView;
+}
+- (IBAction)lunchRefresh:(id)sender;
+@property (strong, nonatomic) IBOutlet UIWebView *webView;
 
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *lunchLoad;
 @end

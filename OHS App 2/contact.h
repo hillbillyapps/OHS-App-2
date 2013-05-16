@@ -9,5 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface contact : UIViewController
+- (IBAction)callKind:(id)sender;
+
+/*- (IBAction)callLower:(id)sender;
+- (IBAction)callUpper:(id)sender;
+- (IBAction)callMiddle:(id)sender;
+- (IBAction)callJr:(id)sender;
+- (IBAction)callHigh:(id)sender;*/
 
 @end

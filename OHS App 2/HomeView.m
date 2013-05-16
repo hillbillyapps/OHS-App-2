@@ -25,8 +25,18 @@
 
 - (void)viewDidLoad
 {
+     void tabBarController();
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    NSURL *url = [NSURL URLWithString:@"http://www.baylife.me/mobile"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [_webView loadRequest:request];
+    
+    NSInteger red = 125;
+    NSInteger green = 38;
+    NSInteger blue = 208;
+     self.tabBarController.tabBar.selectedImageTintColor = [UIColor colorWithRed:red/255.0f green:green/255.0f blue:blue/255.0f alpha:1.0];
+    [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:red/255.0f green:green/255.0f blue:blue/255.0f alpha:1.0]];
+   
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,4 +45,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)HomeBack:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"http://www.baylife.me/mobile"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [_webView loadRequest:request];
+}
 @end

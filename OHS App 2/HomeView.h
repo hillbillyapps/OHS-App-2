@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface HomeView : UIViewController
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+
+
+- (IBAction)HomeBack:(id)sender;
 
 @end

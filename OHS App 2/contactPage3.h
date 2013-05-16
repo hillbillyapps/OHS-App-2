@@ -9,5 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface contactPage3 : UIViewController
+- (IBAction)callKind:(id)sender;
+- (IBAction)callLower;
+- (IBAction)callUpper;
+- (IBAction)callMiddle;
+- (IBAction)callJrHigh;
+- (IBAction)callHighSchool;
+
 
 @end

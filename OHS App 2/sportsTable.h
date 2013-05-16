@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface sportsTable : UITableViewController
+@property (strong, nonatomic) IBOutlet UILabel *hi;
+- (IBAction)reloadSports:(id)sender;
 
 @end

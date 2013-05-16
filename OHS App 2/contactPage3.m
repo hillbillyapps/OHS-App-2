@@ -35,4 +35,40 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)callKind:(id)sender {
+    NSString *phoneNumber = @"telprompt://14796673021";
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
+}
+
+- (IBAction)callLower {
+    NSString *phoneNumber = @"telprompt://14796674745";
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
+}
+
+- (IBAction)callUpper {
+    NSString *phoneNumber = @"telprompt://14796673464";
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
+}
+
+- (IBAction)callMiddle {
+    NSString *phoneNumber = @"telprompt://14794686111";
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
+}
+
+- (IBAction)callJrHigh {
+    NSString *phoneNumber = @"telprompt://14796674747";
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
+}
+
+- (IBAction)callHighSchool {
+    NSString *phoneNumber = @"telprompt://14796674116";
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
+}
+
+- (IBAction)callSuper {
+    NSString *phoneNumber = @"telprompt://14796674118";
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
+}
+
+
 @end

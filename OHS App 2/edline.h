@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface edline : UIViewController
+@interface edline : UIViewController <UIWebViewDelegate> {
+    IBOutlet UIWebView *edlineLoad;
+}
+@property (strong, nonatomic) IBOutlet UIWebView *viewBro;
+- (IBAction)edlineRefresh:(id)sender;
+@property (strong, nonatomic) IBOutlet UIWebView *edlineLoad;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *loading;
 
 @end

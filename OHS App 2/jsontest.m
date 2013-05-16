@@ -12,6 +12,15 @@
 
 @end
 
+#define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+
+#define kjsonURL [NSURL URLWithString: @"http://itunes.apple.com/search?term=neil%20north&entity=software&attribute=softwareDeveloper&country=us"]
+
+//ivar
+
+NSMutableArray *jsonResults;
+
+
 @implementation jsontest
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

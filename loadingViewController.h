@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface loadingViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIProgressView *someStyle;
 
 @end

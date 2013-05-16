@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@interface ScheduleView : UIViewController <UIWebViewDelegate> {
+    IBOutlet UIWebView *webView;
+}
+@property (strong, nonatomic) IBOutlet UIWebView *webView;
 
-@interface ScheduleView : UIViewController
+- (IBAction)reloadSchedules:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *scheduleLoading;
 @end
