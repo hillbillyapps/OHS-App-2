@@ -267,7 +267,7 @@ NSMutableArray *jsonResults;
     double ti = [convertedDate timeIntervalSinceDate:todayDate];
     ti = ti * -1;
     if(ti < 1) {
-    	return @"never";
+    	return @"over a month ago";
     } else 	if (ti < 60) {
     	return @"less than a minute ago";
     } else if (ti < 3600) {
@@ -280,7 +280,7 @@ NSMutableArray *jsonResults;
     	int diff = round(ti / 60 / 60 / 24);
     	return[NSString stringWithFormat:@"%d days ago", diff];
     } else {
-    	return @"never";
+    	return @"over a month ago";
     }
 }
 
@@ -354,7 +354,7 @@ cell.detailTextLabel.text = [NSString stringWithFormat:@"Posted on: %@ by %@",da
         UIImage *imageLoad2 = [[UIImage alloc] initWithData:imageData];
                 dispatch_sync(dispatch_get_main_queue(), ^{
     if(!imageData) {
-        cell.imageView.image = [UIImage imageNamed:@"images/Hillbilly-Rounded1.png"];
+        cell.imageView.image = [UIImage imageNamed:@"Hillbilly-Rounded1.png"];
     } else if(imageData) {
         cell.imageView.layer.masksToBounds = YES;
         cell.imageView.layer.cornerRadius = 13.0;
@@ -384,17 +384,27 @@ cell.detailTextLabel.text = [NSString stringWithFormat:@"Posted on: %@ by %@",da
     	int diff = round(ti / 60);
     	cell.detailTextLabel.text = [NSString stringWithFormat:@"posted %d minutes ago", diff];
     } else if (ti < 86400) {
-    	int diff = round(ti / 60 / 60);
+    	int diff = floor(ti / 60 / 60);
     	cell.detailTextLabel.text = [NSString stringWithFormat:@"posted %d hours ago", diff];
     } else if (ti < 2629743) {
     	int diff = round(ti / 60 / 60 / 24);
     	cell.detailTextLabel.text = [NSString stringWithFormat:@"posted %d days ago", diff];
           //  cell.detailTextLabel.text = date2;
-    } else {
-    cell.detailTextLabel.text = @"never";
+    } else if (ti < 31556916) {
+        int diff = floor(ti / 60 / 60 / 24 / 30);
+        if (diff < 2){
+            	cell.detailTextLabel.text = [NSString stringWithFormat:@"posted %d month ago", diff];
+        }
+        else {
+         	cell.detailTextLabel.text = [NSString stringWithFormat:@"posted %d months ago", diff];
+        }
+    }
+    else if (ti > 31556916) {
+        cell.detailTextLabel.text = @"over a year ago";
+    }
+    else { cell.detailTextLabel.text = @"Error";
     }
     
-
 
 
     cell.textLabel.text = shortString;
@@ -450,7 +460,7 @@ cell.detailTextLabel.text = [NSString stringWithFormat:@"Posted on: %@ by %@",da
              UIViewController *controller3 = [self.storyboard instantiateViewControllerWithIdentifier:@"picture-story"];
              [self.navigationController pushViewController:controller3 animated:YES];
     } else if (!imageURL && screenHeight == 480) {
-        UIViewController *controller3 = [self.storyboard instantiateViewControllerWithIdentifier:@"jsonTest"];
+        UIViewController *controller3 = [self.storyboard instantiateViewControllerWithIdentifier:@"storypage"];
         [self.navigationController pushViewController:controller3 animated:YES];
     } else if (!imageURL && screenHeight == 568) {
         UIViewController *controller3 = [self.storyboard instantiateViewControllerWithIdentifier:@"jsonTest5"];

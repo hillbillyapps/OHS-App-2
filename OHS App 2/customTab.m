@@ -26,10 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSInteger red = 125;
-    NSInteger green = 38;
-    NSInteger blue = 208;
-    self.moreNavigationController.navigationBar.tintColor = [UIColor colorWithRed:red/255.0f green:green/255.0f blue:blue/255.0f alpha:1.0];
+   
      
 	// Do any additional setup after loading the view.
 }

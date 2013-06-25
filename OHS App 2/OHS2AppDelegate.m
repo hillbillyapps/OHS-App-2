@@ -11,6 +11,7 @@
 //#define kjsonURL [NSURL URLWithString: @"http://baylife.me/mobile/json"]
 #define kjsonURL [NSURL URLWithString: @"https://graph.facebook.com/142919315888548/feed?access_token=BAACEdEose0cBABU0PXay1XA0H9ZBOO5cEFATGabYgZCJgG1bBe2plLe88eXpWxgFrzdNQCd2yEIyJ1mZBcncPitn8AcfbjdY9ZCfH0v8kSZB8WffZC6TdxNoe0csGLqK16p4s2lEPKzLbKVdjtxAYEH0NRgaI9DFEZBmsvDJAK51tsUnHdEGppbvbNZBDmWRRQMZD"]
 
+#import <Parse/Parse.h>
 #import "OHS2AppDelegate.h"
 
 @implementation OHS2AppDelegate
@@ -24,6 +25,9 @@
        // [aview show];
        // return NO;
     //}
+    [Parse setApplicationId:@"TNwVcBVZsFA8uAJnyG6CWAKrO1XRd7Q50adxnqE5"
+                  clientKey:@"I7OzUycGRotKj9BPUSNTNGwJCYadr6WqvdLmsqWb"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     // Override point for customization after application launch.
     return YES;
