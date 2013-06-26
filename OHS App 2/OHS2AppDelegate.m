@@ -17,14 +17,7 @@
 @implementation OHS2AppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  //  NSData* data = [NSData dataWithContentsOfURL:
-   //
-    //                kjsonURL];
-    //if(!data) {
-     //   UIAlertView*aview=[[UIAlertView alloc]initWithTitle:@"Connection Failed" message:@"Network error" delegate:self cancelButtonTitle:@"Bug" otherButtonTitles:nil, nil ];
-       // [aview show];
-       // return NO;
-    //}
+
     [Parse setApplicationId:@"TNwVcBVZsFA8uAJnyG6CWAKrO1XRd7Q50adxnqE5"
                   clientKey:@"I7OzUycGRotKj9BPUSNTNGwJCYadr6WqvdLmsqWb"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];

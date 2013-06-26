@@ -24,6 +24,7 @@
                         <segue destination="k6m-tW-yU9" kind="relationship" relationship="viewControllers" id="Xm8-P6-vD4"/>
                         <segue destination="er9-9D-mZH" kind="relationship" relationship="viewControllers" id="Im6-kN-MRF"/>
                         <segue destination="6v2-mJ-pyz" kind="relationship" relationship="viewControllers" id="VRX-CC-z3R"/>
+                        <segue destination="pzS-XH-Cyn" kind="relationship" relationship="viewControllers" id="tr5-bW-1UY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
@@ -284,7 +285,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kNk-9R-JYe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="569" y="2414"/>
+            <point key="canvasLocation" x="1095" y="2414"/>
         </scene>
         <!--Edline-->
         <scene sceneID="ofa-du-lPY">
@@ -325,7 +326,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4wN-cl-xEX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1101" y="2414"/>
+            <point key="canvasLocation" x="1627" y="2414"/>
         </scene>
         <!--Navigation Controller - About-->
         <scene sceneID="FaL-Eh-4ih">
@@ -527,7 +528,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aX3-Ou-Nkz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1051" y="1928"/>
+            <point key="canvasLocation" x="-1219" y="2316"/>
         </scene>
         <!--Post View-->
         <scene sceneID="ivb-ou-kgv">
@@ -545,7 +546,90 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jZp-XY-IMR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-621" y="1946"/>
+            <point key="canvasLocation" x="-749" y="2322"/>
+        </scene>
+        <!--Admin Page-->
+        <scene sceneID="per-ZA-WMq">
+            <objects>
+                <viewController id="j3q-ZM-UYc" customClass="adminPage" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r9W-AK-idk">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fiw-bQ-rz1"/>
+                    <connections>
+                        <segue destination="Ypp-Ss-qcB" kind="push" identifier="loginToPostPage" id="rNN-GN-FKP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="297-VF-wkJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-223" y="2986"/>
+        </scene>
+        <!--Post Page-->
+        <scene sceneID="hhq-hZ-XuF">
+            <objects>
+                <viewController storyboardIdentifier="postPage" id="Ypp-Ss-qcB" customClass="postPage" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pbg-nw-Gax">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Username" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZN-fd-9zj">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="169" id="duL-fq-idg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title..." borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uRh-9O-H57">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="236" id="gVK-GF-Qpc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Story..." borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ig4-3L-ias">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFS-0N-uMP">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="post story">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="postButton:" destination="Ypp-Ss-qcB" eventType="touchUpInside" id="for-Vx-6lH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uRh-9O-H57" firstAttribute="trailing" secondItem="Ig4-3L-ias" secondAttribute="trailing" type="default" id="1NL-oZ-tfa"/>
+                            <constraint firstItem="uRh-9O-H57" firstAttribute="leading" secondItem="Pbg-nw-Gax" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="5HD-iY-4X2"/>
+                            <constraint firstItem="FFS-0N-uMP" firstAttribute="top" secondItem="Pbg-nw-Gax" secondAttribute="top" constant="269" id="CKa-RK-22x"/>
+                            <constraint firstItem="uRh-9O-H57" firstAttribute="top" secondItem="Pbg-nw-Gax" secondAttribute="top" constant="82" id="CjD-Af-EVr"/>
+                            <constraint firstItem="FFS-0N-uMP" firstAttribute="leading" secondItem="Pbg-nw-Gax" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Cme-eD-0Xd"/>
+                            <constraint firstItem="Ig4-3L-ias" firstAttribute="leading" secondItem="Pbg-nw-Gax" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="R77-cQ-njl"/>
+                            <constraint firstItem="RZN-fd-9zj" firstAttribute="top" secondItem="Pbg-nw-Gax" secondAttribute="top" constant="20" symbolic="YES" type="default" id="ien-Cp-BTd"/>
+                            <constraint firstAttribute="trailing" secondItem="RZN-fd-9zj" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="mT5-GW-Yss"/>
+                            <constraint firstItem="Ig4-3L-ias" firstAttribute="top" secondItem="Pbg-nw-Gax" secondAttribute="top" constant="178" id="rIw-ev-sRU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Cjx-SG-ubH"/>
+                    <connections>
+                        <outlet property="storyText" destination="Ig4-3L-ias" id="4Nh-RE-fW8"/>
+                        <outlet property="titleText" destination="uRh-9O-H57" id="YYY-DV-hPH"/>
+                        <outlet property="userLabel" destination="RZN-fd-9zj" id="DtJ-N5-gu9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hyi-6a-4Tj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="154" y="2966"/>
         </scene>
         <!--Navigation Controller - Contact-->
         <scene sceneID="Pa8-hS-peX">
@@ -561,7 +645,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mwo-th-duk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="569" y="3106"/>
+            <point key="canvasLocation" x="1095" y="3106"/>
         </scene>
         <!--Contact Page3 - Contact-->
         <scene sceneID="4kj-eK-4Wl">
@@ -675,7 +759,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uj3-C8-Whh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1101" y="3106"/>
+            <point key="canvasLocation" x="1627" y="3106"/>
         </scene>
         <!--Navigation Controller - Sports-->
         <scene sceneID="XZU-x0-L63">
@@ -779,6 +863,25 @@
             </objects>
             <point key="canvasLocation" x="1441" y="-433"/>
         </scene>
+        <!--Navigation Controller - Admin-->
+        <scene sceneID="Ad6-U7-PUj">
+            <objects>
+                <navigationController id="pzS-XH-Cyn" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Admin" id="oAd-fY-M43"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sj0-6U-hez">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="j3q-ZM-UYc" kind="relationship" relationship="rootViewController" id="YXQ-Kj-Y19"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ULW-gH-4Zl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-749" y="2986"/>
+        </scene>
     </scenes>
     <resources>
         <image name="60x32.png" width="61" height="32"/>
@@ -790,110 +893,6 @@
         <image name="Spoon and Fork.png" width="36" height="30"/>
         <image name="info-icon.png" width="30" height="30"/>
     </resources>
-    <classes>
-        <class className="LunchView" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LunchView.h"/>
-            <relationships>
-                <relationship kind="action" name="lunchRefresh:"/>
-                <relationship kind="outlet" name="lunchLoad" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="PFQueryTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PFQueryTableViewController.h"/>
-        </class>
-        <class className="ScheduleView" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ScheduleView.h"/>
-            <relationships>
-                <relationship kind="action" name="reloadSchedules:"/>
-                <relationship kind="outlet" name="scheduleLoading" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="UIRefreshControl" superclassName="UIControl">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIRefreshControl.h"/>
-        </class>
-        <class className="contactPage3" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/contactPage3.h"/>
-            <relationships>
-                <relationship kind="action" name="callHighSchool"/>
-                <relationship kind="action" name="callJrHigh"/>
-                <relationship kind="action" name="callKind:"/>
-                <relationship kind="action" name="callLower"/>
-                <relationship kind="action" name="callMiddle"/>
-                <relationship kind="action" name="callUpper"/>
-            </relationships>
-        </class>
-        <class className="customTab" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/customTab.h"/>
-        </class>
-        <class className="edline" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/edline.h"/>
-            <relationships>
-                <relationship kind="action" name="edlineRefresh:"/>
-                <relationship kind="outlet" name="edlineLoad" candidateClass="UIWebView"/>
-                <relationship kind="outlet" name="loading" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="viewBro" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="jsonTest5" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/jsonTest5.h"/>
-            <relationships>
-                <relationship kind="outlet" name="label22" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="label33" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="loading" candidateClass="UIActivityIndicatorView"/>
-            </relationships>
-        </class>
-        <class className="ozark" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ozark.h"/>
-            <relationships>
-                <relationship kind="action" name="refreshHome:"/>
-                <relationship kind="outlet" name="barItem" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="loading" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="refreshControl" candidateClass="UIRefreshControl"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="parseTable" superclassName="PFQueryTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/parseTable.h"/>
-        </class>
-        <class className="picture_story" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/picture_story.h"/>
-            <relationships>
-                <relationship kind="outlet" name="label22" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="label33" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="loading" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="loadingView" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-            </relationships>
-        </class>
-        <class className="postView" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/postView.h"/>
-            <relationships>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="storyText" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="sportsTable" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/sportsTable.h"/>
-            <relationships>
-                <relationship kind="action" name="reloadSports:"/>
-                <relationship kind="outlet" name="hi" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="storypage" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/storypage.h"/>
-            <relationships>
-                <relationship kind="outlet" name="label22" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="label33" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="loading" candidateClass="UIActivityIndicatorView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

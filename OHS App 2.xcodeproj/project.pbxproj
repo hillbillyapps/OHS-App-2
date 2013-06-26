@@ -85,6 +85,8 @@
 		14F5EAC116DE61BD009E552A /* story2.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F5EAC016DE61BD009E552A /* story2.m */; };
 		14FF0BA116810F5F00BCD35B /* ScheduleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FF0BA016810F5F00BCD35B /* ScheduleView.m */; };
 		5A28D33B1762228000C4AD46 /* postView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A28D33A1762228000C4AD46 /* postView.m */; };
+		5AA2F9ED177A960C00A31067 /* adminPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2F9EC177A960C00A31067 /* adminPage.m */; };
+		5AA2F9F0177A991900A31067 /* postPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2F9EF177A991900A31067 /* postPage.m */; };
 		5AC4CDAC1748436B00EAC610 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AC4CDAB1748436B00EAC610 /* Parse.framework */; };
 		5AC4CDAE1748439A00EAC610 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AC4CDAD1748439A00EAC610 /* AudioToolbox.framework */; };
 		5AC4CDB0174843A000EAC610 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AC4CDAF174843A000EAC610 /* CFNetwork.framework */; };
@@ -227,6 +229,10 @@
 		14FF0BA016810F5F00BCD35B /* ScheduleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleView.m; sourceTree = "<group>"; };
 		5A28D3391762228000C4AD46 /* postView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = postView.h; sourceTree = "<group>"; };
 		5A28D33A1762228000C4AD46 /* postView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = postView.m; sourceTree = "<group>"; };
+		5AA2F9EB177A960C00A31067 /* adminPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = adminPage.h; sourceTree = "<group>"; };
+		5AA2F9EC177A960C00A31067 /* adminPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = adminPage.m; sourceTree = "<group>"; };
+		5AA2F9EE177A991900A31067 /* postPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = postPage.h; sourceTree = "<group>"; };
+		5AA2F9EF177A991900A31067 /* postPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = postPage.m; sourceTree = "<group>"; };
 		5AC4CDAB1748436B00EAC610 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		5AC4CDAD1748439A00EAC610 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		5AC4CDAF174843A000EAC610 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -320,6 +326,10 @@
 			children = (
 				5A0B62A417454AA00083A6D6 /* images */,
 				1451E368167F757B00E7237A /* MainStoryboard_iPhone.storyboard */,
+				5AA2F9EE177A991900A31067 /* postPage.h */,
+				5AA2F9EF177A991900A31067 /* postPage.m */,
+				5AA2F9EB177A960C00A31067 /* adminPage.h */,
+				5AA2F9EC177A960C00A31067 /* adminPage.m */,
 				5ACB0E21174871790099D0F9 /* parseTable.h */,
 				5ACB0E22174871790099D0F9 /* parseTable.m */,
 				5A28D3391762228000C4AD46 /* postView.h */,
@@ -634,6 +644,8 @@
 				143584E3173D865400F2B970 /* picture-story5.m in Sources */,
 				5ACB0E23174871790099D0F9 /* parseTable.m in Sources */,
 				5A28D33B1762228000C4AD46 /* postView.m in Sources */,
+				5AA2F9ED177A960C00A31067 /* adminPage.m in Sources */,
+				5AA2F9F0177A991900A31067 /* postPage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
