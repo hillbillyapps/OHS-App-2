@@ -29,15 +29,21 @@
     [super viewDidLoad];
     PFObject *postInfo = _detailItems;
     self.title = [postInfo objectForKey:@"title"];
+    
+    UITextView *titleTextView = [[UITextView alloc] initWithFrame:CGRectMake(0,20,300,30)];
+    titleTextView.text = [postInfo objectForKey:@"title"];
+    titleTextView.textColor = [UIColor blackColor];
+    titleTextView.textAlignment = UITextAlignmentCenter;
+    titleTextView.font = [UIFont fontWithName:@"Helvetica-Bold"
+        size:[UIFont systemFontSize]];
     UITextView *storyTextView = [[UITextView alloc] initWithFrame:CGRectMake(20,50,280,100)];
-       storyTextView.text = [postInfo objectForKey:@"story"];
-   // float textViewHieght = storyTextView.contentSize.height;
-
+    storyTextView.text = [postInfo objectForKey:@"story"];
     storyTextView.textColor = [UIColor blackColor];
     storyTextView.font = [UIFont systemFontOfSize:14];
     [storyTextView setBackgroundColor:[UIColor clearColor]];
     storyTextView.editable = NO;
     storyTextView.scrollEnabled = YES;
+    [_scrollView addSubview:titleTextView];
     [_scrollView addSubview:storyTextView];
     CGRect frame = storyTextView.frame;
     frame.size.height = storyTextView.contentSize.height;

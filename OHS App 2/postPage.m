@@ -21,11 +21,12 @@
     }
     return self;
 }
-
-
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
-    [self dismissViewControllerAnimated:YES completion:NULL];
+    [self.navigationController popViewControllerAnimated:YES];
+   // [self dismissViewControllerAnimated:YES completion:NULL];
+    [self viewDidLoad];
     NSLog(@"logged in22");
+    [self.logOutButton isEnabled];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -33,14 +34,28 @@
     [self.titleText resignFirstResponder];
     [self.storyText resignFirstResponder];
 }
- 
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    NSLog(@"Appeared");
+    if ([PFUser currentUser] != nil) {
+        [self.view addSubview:_titleText];
+        [self.view addSubview:_storyText];
+        [self.view addSubview:_postButtonOutlet];
+    } else {
+        _userLabel.text = @"Logged out";
+        [self.titleText removeFromSuperview];
+        [self.storyText removeFromSuperview];
+        [self.postButtonOutlet removeFromSuperview];
+    }
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationController.title = @"Post a new story";
     if ([PFUser currentUser]) {
         _userLabel.text = [NSString stringWithFormat:@"%@",[PFUser currentUser].username];
     } else {
+        
         PFLogInViewController *logController = [PFLogInViewController alloc];
         logController.delegate = self;
         
@@ -63,10 +78,12 @@
     [self setUserLabel:nil];
     [self setTitleText:nil];
     [self setStoryText:nil];
+    [self setLogOutButton:nil];
+    [self setPostButtonOutlet:nil];
     [super viewDidUnload];
 }
 - (IBAction)postButton:(id)sender {
-
+    if ([PFUser currentUser] != nil) {
     PFObject *stories = [PFObject objectWithClassName:@"stories"];
     if (![_titleText.text isEqualToString:@""] && ![_storyText.text isEqualToString:@""]) {
     [stories setObject:_titleText.text forKey:@"title"];
@@ -82,7 +99,23 @@
         [aview2 show];
         return;
     }
- 
+    } else if ([PFUser currentUser] == nil) {
+        UIAlertView*aview2=[[UIAlertView alloc]initWithTitle:@"Error" message:@"You must log in to post" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil ];
+        [aview2 show];
+        return;
 
+    }
+}
+- (IBAction)logOut:(id)sender {
+    [PFUser logOut];
+    PFLogInViewController *logController = [PFLogInViewController alloc];
+    logController.delegate = self;
+    logController.fields = PFLogInFieldsUsernameAndPassword
+    | PFLogInFieldsLogInButton
+    | PFLogInFieldsSignUpButton
+    | PFLogInFieldsDismissButton;
+    [self.navigationController pushViewController:logController animated:YES];
+
+    NSLog(@"logged out");
 }
 @end

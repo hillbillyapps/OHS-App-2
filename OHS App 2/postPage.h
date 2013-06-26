@@ -10,9 +10,12 @@
 #import <Parse/Parse.h>
 
 @interface postPage : UIViewController <PFLogInViewControllerDelegate>
+@property (weak, nonatomic) IBOutlet UIButton *postButtonOutlet;
 - (IBAction)postButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *titleText;
 @property (weak, nonatomic) IBOutlet UITextField *storyText;
+- (IBAction)logOut:(id)sender;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *logOutButton;
 
 @property (weak, nonatomic) IBOutlet UILabel *userLabel;
 @end
