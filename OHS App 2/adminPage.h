@@ -8,6 +8,6 @@
 
 #import <Parse/Parse.h>
 
-@interface adminPage : UIViewController
+@interface adminPage : UIViewController <PFLogInViewControllerDelegate>
 
 @end

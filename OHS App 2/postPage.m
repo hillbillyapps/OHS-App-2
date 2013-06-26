@@ -7,7 +7,6 @@
 //
 
 #import "postPage.h"
-#import <Parse/Parse.h>
 
 @interface postPage ()
 
@@ -24,12 +23,31 @@
     return self;
 }
 
+
+- (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
+    [self dismissViewControllerAnimated:YES completion:NULL];
+    NSLog(@"logged in22");
+}
+
+ 
 - (void)viewDidLoad
 {
    // self.navigationController.title = @"Post a new story";
     [super viewDidLoad];
+    
+    
+
     if ([PFUser currentUser]) {
         _userLabel.text = [NSString stringWithFormat:@"%@",[PFUser currentUser].username];
+    } else {
+        PFLogInViewController *logController = [PFLogInViewController alloc];
+        logController.delegate = self;
+        
+        [self.navigationController pushViewController:logController animated:YES];
+        logController.fields = PFLogInFieldsUsernameAndPassword
+        | PFLogInFieldsLogInButton
+        | PFLogInFieldsSignUpButton
+        | PFLogInFieldsDismissButton;
     }
 	// Do any additional setup after loading the view.
 }
@@ -39,6 +57,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 - (void)viewDidUnload {
     [self setUserLabel:nil];

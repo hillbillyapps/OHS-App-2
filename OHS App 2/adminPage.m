@@ -24,18 +24,28 @@
     return self;
 }
 
-
+// Sent to the delegate when a PFUser is logged in.
+- (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
+    [self dismissViewControllerAnimated:YES completion:NULL];
+    NSLog(@"logged in22");
+}
 
 - (void)viewDidLoad
 {
+    PFLogInViewController *logController = [PFLogInViewController alloc];
+    logController.delegate = self;
     [super viewDidLoad];
     if ([PFUser currentUser]) {
         NSLog(@"logged in");
         [self performSegueWithIdentifier:@"loginToPostPage" sender:self];
         
     } else {
-        PFLogInViewController *logController = [PFLogInViewController alloc];
+
         [self.navigationController pushViewController:logController animated:YES];
+        logController.fields = PFLogInFieldsUsernameAndPassword
+        | PFLogInFieldsLogInButton
+        | PFLogInFieldsSignUpButton
+        | PFLogInFieldsDismissButton;
     }
 	// Do any additional setup after loading the view.
 }

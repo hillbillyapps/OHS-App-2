@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
-@interface postPage : UIViewController
+@interface postPage : UIViewController <PFLogInViewControllerDelegate>
 - (IBAction)postButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *titleText;
 @property (weak, nonatomic) IBOutlet UITextField *storyText;
