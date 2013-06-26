@@ -14,4 +14,4 @@ NSString *posty;
 @property (nonatomic) NSValue *getPostId;
 @property (nonatomic) NSString *titlePost;
 @end
-//lol
+//lolk
