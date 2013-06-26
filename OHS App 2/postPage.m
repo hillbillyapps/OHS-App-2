@@ -18,7 +18,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -29,14 +28,16 @@
     NSLog(@"logged in22");
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
+    [self.titleText resignFirstResponder];
+    [self.storyText resignFirstResponder];
+}
  
 - (void)viewDidLoad
 {
-   // self.navigationController.title = @"Post a new story";
     [super viewDidLoad];
-    
-    
-
+    self.navigationController.title = @"Post a new story";
     if ([PFUser currentUser]) {
         _userLabel.text = [NSString stringWithFormat:@"%@",[PFUser currentUser].username];
     } else {
@@ -49,13 +50,11 @@
         | PFLogInFieldsSignUpButton
         | PFLogInFieldsDismissButton;
     }
-	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
