@@ -29,28 +29,6 @@
     [super viewDidLoad];
     PFObject *postInfo = _detailItems;
     self.title = [postInfo objectForKey:@"title"];
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     UITextView *storyTextView = [[UITextView alloc] initWithFrame:CGRectMake(20,50,280,100)];
        storyTextView.text = [postInfo objectForKey:@"story"];
    // float textViewHieght = storyTextView.contentSize.height;

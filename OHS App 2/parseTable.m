@@ -137,10 +137,50 @@
  
  PFTableViewCell *cell = (PFTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
  if (cell == nil) {
- cell = [[PFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+ cell = [[PFTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
  }
 
- cell.textLabel.text = [object objectForKey:@"title"];
+     cell.textLabel.text = [object objectForKey:@"title"];
+    
+     NSDateFormatter *df = [[NSDateFormatter alloc] init];
+     [df setFormatterBehavior:NSDateFormatterBehavior10_4];
+     [df setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
+   [df setDateFormat:@"yyyy'-'MM'-'dd'T'HH':'mm':'ss.SSS'Z'"];
+
+     NSString *origDate = [df stringFromDate:object.createdAt];
+     NSDate *convertedDate2 = [df dateFromString:origDate];
+     NSLog(@"%@",convertedDate2);
+     NSDate *todayDate = [NSDate date];
+     double ti = [convertedDate2 timeIntervalSinceDate:todayDate];
+     ti = ti * -1;
+     if(ti < 1) {
+         cell.detailTextLabel.text = @"never";
+     } else 	if (ti < 60) {
+         cell.detailTextLabel.text = @"posted less than a minute ago";
+     } else if (ti < 3600) {
+         int diff = round(ti / 60);
+         cell.detailTextLabel.text = [NSString stringWithFormat:@"posted %d minutes ago", diff];
+     } else if (ti < 86400) {
+         int diff = floor(ti / 60 / 60);
+         cell.detailTextLabel.text = [NSString stringWithFormat:@"posted %d hours ago", diff];
+     } else if (ti < 2629743) {
+         int diff = round(ti / 60 / 60 / 24);
+         cell.detailTextLabel.text = [NSString stringWithFormat:@"posted %d days ago", diff];
+     } else if (ti < 31556916) {
+         int diff = floor(ti / 60 / 60 / 24 / 30);
+         if (diff < 2){
+             cell.detailTextLabel.text = [NSString stringWithFormat:@"posted %d month ago", diff];
+         } else {
+             cell.detailTextLabel.text = [NSString stringWithFormat:@"posted %d months ago", diff];
+         }
+     }
+     else if (ti > 31556916) {
+         cell.detailTextLabel.text = @"over a year ago";
+     }
+     else {
+         cell.detailTextLabel.text = @"Error";
+     }
+
  //cell.imageView.file = [object objectForKey:self.imageKey];
  
  return cell;
@@ -163,7 +203,7 @@
  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
  
  if (cell == nil) {
- cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+ cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
  }
  
  cell.selectionStyle = UITableViewCellSelectionStyleNone;
